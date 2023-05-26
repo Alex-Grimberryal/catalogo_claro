@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.bg-image {
+    background-image: url(../../img/claro\ catalogo_Mesa\ de\ trabajo\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+.containerm{
+    background-image: url(../../img/claro\ catalogo_Mesa\ de\ trabajo\ 1\ copia\ 5.jpg);
+    color: #fff;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.containerf{
+    background-image: url(../../img/claro\ catalogo_Mesa\ de\ trabajo\ 1\ copia.jpg);
+    color: #fff;
+    background-repeat: repeat;
+    background-size: cover;
+    min-height: 600px;
+}
+
+.planes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+h1 {
+    font-size: 48px;
+    /* Tamaño de la letra */
+    text-align: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-secondary {
+    background-color: #707070;
+    color: #fff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #fff;
+    color: #ff0000;
+  }
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav {
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card .font-weight-bold {
+    font-size: 18px;
+}
+
+.card .redes {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.card hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card .text-center {
+    text-align: center;
+}
+
+.card .pt-3 {
+    padding-top: 1rem;
+}
+
+.card .pb-3 {
+    padding-bottom: 1rem;
+}
+
+.card .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+a{
+    text-decoration: none !important;
+}
+.whats{
+    color: black !important;
+}
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
