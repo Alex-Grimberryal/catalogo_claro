@@ -6,6 +6,7 @@ if (isset($_GET['codigo'])) {
 } else {
   echo "valor incorrecto";
 }
+
 $sql = "SELECT * fROM planes_fija where cod_promofija =$codigo";
 $resultado = $con->query($sql);
 $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -18,8 +19,8 @@ foreach ($resultado as $img) {
     <a href="index.php" class="btn btn-secondary btn-lg btn-block">Inicio</a>
   </div>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
+  <button type="button" class="btn btn-secondary btn-lg btn-block justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Contactar
   </button>
 
   <!-- Modal -->
@@ -30,33 +31,96 @@ foreach ($resultado as $img) {
           <h1 class="modal-title fs-5" id="exampleModalLabel">Seleccione el plan del que requiera información</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <ul class="list-group">
-            <?php 
-              $sql = "SELECT * fROM planes_fija ";
+  
+          
+            <?php
+            if ($codigo == 1){
+              $codigo=1;
+              $sql = "SELECT * fROM planes1play WHERE cod_promofija =$codigo";
               $resultado = $con->query($sql);
               $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
+              echo "<div class='modal-body'>";
+              echo " <h2>Planes 1play</h2>";
+            
+              echo "<ul class='list-group'>";
               foreach ($resultado as $plan) {
-                echo "<li class='list-group-item'>";
-                echo "<input class='form-check-input me-1' type='radio' name='listGroupRadio' value='primeraRadio' id='primerRadio' checked>";
-                echo "<label class='form-check-label' for='primerRadio'>" . $plan['nombre_prom'] . "</label>";
-                echo "</li>";
+                echo "<li class='list-group-item'>". $plan['nombrePlan'] . "<a style='margin-left:50px;' class='btn btn-secondary btn-lg btn-block justify-content-end' href='https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaClaro%21%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20".$plan['nombrePlan']."' target='_blank'><i class='fab fa-whatsapp mr-2'></i>Contactar</a></label>";
+                }
+                echo "</ul>";
+                echo  "</div>";
+              }
+              if ($codigo == 2){
+                $codigo=2;
+                $sql = "SELECT * fROM planes1play WHERE tipo_plan = 'planes2playsimple'";
+                $resultado = $con->query($sql);
+                $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
+                echo "<div class='modal-body'>";
+              echo " <h2>Planes 2play</h2>";
+                echo "<ul class='list-group'>";
+                foreach ($resultado as $plan) {
+                  echo "<li class='list-group-item'>". $plan['nombrePlan'] . "<a style='margin-left:50px;' class='btn btn-secondary btn-lg btn-block justify-content-end' href='https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaClaro%21%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20".$plan['nombrePlan']."' target='_blank'><i class='fab fa-whatsapp mr-2'></i>Contactar</a></label>";
+                  }
+                  echo "</ul>";
+                  echo  "</div>";
+                $sql = "SELECT * fROM planes1play WHERE tipo_plan = 'planes2playavanzado'";
+              $resultado = $con->query($sql);
+              $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
+              echo "<div class='modal-body'>";
+              echo " <h2>Planes 2play Avanzado</h2>";
+              echo "<ul class='list-group'>";
+              foreach ($resultado as $plan) {
+                echo "<li class='list-group-item'>". $plan['nombrePlan'] . "<a style='margin-left:50px;' class='btn btn-secondary btn-lg btn-block justify-content-end' href='https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaClaro%21%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20".$plan['nombrePlan']."' target='_blank'><i class='fab fa-whatsapp mr-2'></i>Contactar</a></label>";
+                }
+                echo "</ul>";
+                echo  "</div>";
+              $sql = "SELECT * fROM planes1play WHERE tipo_plan = 'planes2playsuperior'";
+              $resultado = $con->query($sql);
+              $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
+              echo "<div class='modal-body'>";
+              echo " <h2>Planes 2play Superior</h2>";
+              echo "<ul class='list-group'>";
+              foreach ($resultado as $plan) {
+                echo "<li class='list-group-item'>". $plan['nombrePlan'] . "<a style='margin-left:50px;' class='btn btn-secondary btn-lg btn-block justify-content-end' href='https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaClaro%21%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20".$plan['nombrePlan']."' target='_blank'><i class='fab fa-whatsapp mr-2'></i>Contactar</a></label>";
+                }
+                echo "</ul>";
+                echo  "</div>";
+            }
+            if ($codigo == 3){
+              $codigo=3;
+              $sql = "SELECT * fROM planes1play WHERE tipo_plan = 'planes3playavanzado'";
+              $resultado = $con->query($sql);
+              $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
+              echo "<div class='modal-body'>";
+              echo " <h2>Planes 3play Avanzado</h2>";
+              echo "<ul class='list-group'>";
+              foreach ($resultado as $plan) {
+                echo "<li class='list-group-item'>". $plan['nombrePlan'] . "<a style='margin-left:50px;' class='btn btn-secondary btn-lg btn-block justify-content-end' href='https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaClaro%21%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20".$plan['nombrePlan']."' target='_blank'><i class='fab fa-whatsapp mr-2'></i>Contactar</a></label>";
+                }
+                echo "</ul>";
+                echo  "</div>";
+              $sql = "SELECT * fROM planes1play WHERE tipo_plan = 'planes3playsuperior'";
+              $resultado = $con->query($sql);
+              $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
+              echo "<div class='modal-body'>";
+              echo " <h2>Planes 3play Superior</h2>";
+              echo "<ul class='list-group'>";
+              foreach ($resultado as $plan) {
+                echo "<li class='list-group-item'>". $plan['nombrePlan'] . "<a style='margin-left:50px;' class='btn btn-secondary btn-lg btn-block justify-content-end' href='https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaClaro%21%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20".$plan['nombrePlan']."' target='_blank'><i class='fab fa-whatsapp mr-2'></i>Contactar</a></label>";
+                }
+                echo "</ul>";
+                echo  "</div>";
               }
             ?>
-            
-          </ul>
-        </div>
-        <div class="modal-footer">
+
+      
+        <div class='modal-footer'>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary" onclick="enviar()">Enviar</button>
+            
+            </button>
         </div>
       </div>
     </div>
   </div>
-  <a href="https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaBot!%20Deseo%20adquirir%20mi%20Chip%20Postpago%20y%20Portar%20a%20Claro" target="_blank" class="btn btn-secondary btn-lg btn-block justify-content-center">
-    <i class="fab fa-whatsapp mr-2"></i>
-    Contactar
-  </a>
   <div class="col-md-6">
     <a href="fijas.php" class="btn btn-secondary btn-lg btn-block">Volver</a>
   </div>
