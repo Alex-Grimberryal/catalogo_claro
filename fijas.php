@@ -2,7 +2,9 @@
 require_once "controller/bd.php"; ?>
 <div class="container containerf">
     <div class="planes">
-        <h2>Paquetes de 2 y 3Play</h2>
+        <h2>Internet Hogar</h2>
+        <hr>
+        <p>Ingresa a cualquiera de nuestros planes y escoge lo mejor para ti</p>
     </div>
     <div class="list-group">
         <?php $consulta = "SELECT * FROM planes_fija where tipo_plan = 'Planes Play'";

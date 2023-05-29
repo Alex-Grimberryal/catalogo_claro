@@ -27,11 +27,11 @@ body {
 }
 
 .planes {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-
+    text-align: center;
 }
 
 h1 {

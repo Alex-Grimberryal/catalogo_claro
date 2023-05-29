@@ -13,7 +13,7 @@ foreach ($resultado as $img) {
   echo "<img src='public/img/" . $img['img_prom'] . "' alt='' class='responsive-image'>";
 }
 ?>
-<div class="d-flex align-items-center justify-content-around btns" style="height: 50vh; background-color: #DA291C; ">
+<div class="d-flex align-items-center justify-content-around btns" style="height: 30vh; background-color: #DA291C; ">
   <div class="col-md-6">
     <a href="index.php" class="btn btn-secondary btn-lg btn-block">Inicio</a>
   </div>
