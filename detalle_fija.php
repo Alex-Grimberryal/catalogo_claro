@@ -16,11 +16,11 @@ foreach ($resultado as $img) {
 ?>
 <div class="d-flex align-items-center justify-content-around btns" style="height: 26vh; background-color: #DA291C; ">
   <div class="col-md-6">
-    <a href="index.php" class="btn btn-secondary btn-lg btn-block">Inicio</a>
+    <a href="index.php" class="btn aA btn-secondary btn-lg btn-block"  >Inicio</a>
   </div>
   <!-- Button trigger modal -->
   <div class="col-md-6">
-    <button type="button" class="btn btn-secondary btn-lg btn-block" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Selecciona tu mejor opcion</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Selecciona<br>tu mejor<br>opción</button>
   </div>
   <!-- Modal principal -->
   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -160,7 +160,7 @@ foreach ($resultado as $img) {
           ?>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Regresar</button>
         </div>
       </div>
     </div>
@@ -192,13 +192,13 @@ foreach ($resultado as $img) {
           ?>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Regresar</button>
         </div>
       </div>
     </div>
   </div>
   <div class="col-md-6">
-    <a href="fijas.php" class="btn btn-secondary btn-lg btn-block">Volver</a>
+    <a href="fijas.php" class="btn aA btn-secondary btn-lg btn-block">Volver</a>
   </div>
 
 </div>
