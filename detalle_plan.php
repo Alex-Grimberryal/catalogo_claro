@@ -17,7 +17,7 @@ foreach ($resultado as $img) {
   <div class="col-md-6">
     <a href="index.php" class="btn btn-secondary btn-lg btn-block">Inicio</a>
   </div>
-  <a href="https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaBot!%20Deseo%20adquirir%20mi%20Chip%20Postpago%20y%20Portar%20a%20Claro" target="_blank"  class="btn btn-secondary btn-lg btn-block justify-content-center">
+  <a href="https://api.whatsapp.com/send/?phone=51902430825&amp;text=%C2%A1Hola%20TiendaClaro!%20Deseo%20adquirir%20mi%20Chip%20Postpago%20y%20Portar%20a%20Claro" target="_blank"  class="btn btn-secondary btn-lg btn-block justify-content-center">
     <i class="fab fa-whatsapp mr-2"></i>
     Contactar
   </a>
